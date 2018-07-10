@@ -2,11 +2,11 @@
 #![feature(const_fn)]
 #![feature(panic_implementation)]
 #![allow(non_upper_case_globals)]
-#![feature(lang_items)]
-pub mod lang_items;
 
-extern crate libtww;
 extern crate arrayvec;
+extern crate libtww;
+#[macro_use]
+extern crate lazy_static;
 
 use libtww::game::Console;
 use libtww::system;
@@ -15,6 +15,7 @@ pub mod cheat_menu;
 pub mod controller;
 pub mod flag_menu;
 pub mod inventory_menu;
+pub mod lang_items;
 pub mod main_menu;
 pub mod memory;
 pub mod mutex;

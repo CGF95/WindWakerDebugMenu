@@ -4,8 +4,10 @@ use libtww::game::Console;
 use libtww::link::CollisionType;
 use libtww::Link;
 
-use {cheat_menu, controller, flag_menu, inventory_menu, main_menu, memory, quest_menu, spawn_menu,
-     triforce, warp_menu};
+use {
+    cheat_menu, controller, flag_menu, inventory_menu, main_menu, memory, quest_menu, spawn_menu,
+    triforce, warp_menu,
+};
 
 pub struct ColonWrapper<'a>(pub &'a str, pub &'a str, pub usize);
 
