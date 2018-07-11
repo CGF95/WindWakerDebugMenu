@@ -51,8 +51,10 @@ pub extern "C" fn game_loop() {
     cheat_menu::apply_cheats();
     let d_down = controller::DPAD_DOWN.is_pressed();
     let rt_down = controller::R.is_down();
+    let console = Console::get();
 
     if unsafe { visible } {
+        console.background_color.a = 150;
         match unsafe { menu_state } {
             MenuState::MainMenu => main_menu::render(),
             MenuState::WarpMenu => warp_menu::render(),
@@ -65,13 +67,13 @@ pub extern "C" fn game_loop() {
             MenuState::Memory => memory::render(),
         }
     } else if d_down && rt_down && unsafe { !popups::visible } {
-        let console = Console::get();
         console.visible = true;
         unsafe {
             visible = true;
         }
     } else {
         // Only check popups if the Debug Menu is not open
-        popups::check_global_flags();
+        // popups::check_global_flags();
+        memory::render_watches();
     }
 }
