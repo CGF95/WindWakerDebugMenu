@@ -18,8 +18,7 @@ pub fn render() {
     const MENU_ITEM_INVENTORY: usize = 5;
     const MENU_ITEM_CHEAT: usize = 6;
     const MENU_ITEM_SPAWN: usize = 7;
-    const MENU_ITEM_QUEST: usize = 8;
-    const MENU_ITEM_MEMORY: usize = 9;
+    const MENU_ITEM_MEMORY: usize = 8;
 
     let console = Console::get();
 
@@ -47,7 +46,6 @@ pub fn render() {
         "Inventory Menu",
         "Cheat Menu",
         "Spawn Menu",
-        "Quest Menu",
         "Memory",
     ];
 
@@ -75,10 +73,6 @@ pub fn render() {
             }
             MENU_ITEM_SPAWN => {
                 transition(MenuState::SpawnMenu);
-                return;
-            }
-            MENU_ITEM_QUEST => {
-                transition(MenuState::QuestMenu);
                 return;
             }
             MENU_ITEM_MEMORY => {
