@@ -15,6 +15,6 @@ panic = "abort"
 lto = true
 
 [dependencies]
-libtww = { path = "libtww-core", features = [] }
+libtww = { path = "libtww-core", features = ["alloc"] }
 arrayvec = { version = "0.4.7", default-features = false }
 lazy_static = { version = "1.0.1", features=["spin_no_std"] }
