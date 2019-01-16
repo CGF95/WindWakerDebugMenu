@@ -15,6 +15,8 @@ panic = "abort"
 lto = true
 
 [dependencies]
-libtww = { path = "libtww-core", features = ["alloc"] }
+libtww = { path = "libtww-core" }
 arrayvec = { version = "0.4.7", default-features = false }
 lazy_static = { version = "1.0.1", features=["spin_no_std"] }
+gcn-fonts = { git = "https://github.com/hallcristobal/gcn-fonts", rev = "c0109dbc59ac8fa7100b71fa5bd5d7ed0f26ff3f" }
+gcn = { git = "https://github.com/CryZe/gcn", rev = "e0055c4d9068ffcebe496517ac925887a3b6be08", features=["serialize"] }
